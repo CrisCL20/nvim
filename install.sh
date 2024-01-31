@@ -1,3 +1,5 @@
+echo Starting instalation...
+echo [DEBUG] installing neovim...
 # Install stable version of neovim
 cd ~
 sudo apt-get install ninja-build gettext cmake unzip curl 
@@ -8,6 +10,7 @@ sudo make install
 cd ~
 rm -rf neovim_r
 
+echo [DEBUG] installing nerd fonts...
 # Install nerdfonts
 cd ~
 git clone https://github.com/ryanoasis/nerd-fonts.git nerd-fonts
@@ -16,6 +19,7 @@ cd nerd-fonts
 cd ~
 rm -rf nerd-fonts
 
+echo [DEBUG] moving files...
 # Move config file into .config
 cd ~/.config 
 mv -r ~/nvim/nvim .
